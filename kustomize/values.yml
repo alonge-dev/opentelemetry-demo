@@ -1,0 +1,24 @@
+components:
+  frontend:
+    env:
+      - name: PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
+        value: http://localhost:30080/otlp-http/v1/traces
+#   frontendProxy:
+#     service:
+#       port: 8080
+#     ingress:
+#       enabled: true
+#       ingressClassName: traefik
+#       annotations: {
+#         "ingress.kubernetes.io/ssl-redirect": "false"
+#       }
+#       hosts:
+#         - host: localhost
+#           paths:
+#             - path: /
+#               pathType: Prefix
+#               port: 8080
+
+    # env:
+    #   - name: PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
+    #     value: http://localhost:8081/otlp-http/v1/traces
