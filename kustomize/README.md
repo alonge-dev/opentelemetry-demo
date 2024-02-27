@@ -42,11 +42,18 @@ To install the OpenTelemetry demo using Helm charts, follow these steps:
 
   You should see the `opentelemetry-demo`resources get applied to your cluster
 
+## Verify all resources are running
+ 
+```shell
+kubectl get pods,svc,deployments,ingress
+```
+
 ## Preview Apps 
 Once the installation is complete, you can access and interact with the OpenTelemetry demo resources at the following url on your browser
 
 The following components are installed
 - Jaeger
+
 
 ## Cleanup
 
