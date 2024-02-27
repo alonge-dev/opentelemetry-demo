@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# This script is used to install kustomize and helm on a killa koda playground
+# This script is used to install kustomize and helm on a killer coda playground
 
 # Install kustomize
 curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
