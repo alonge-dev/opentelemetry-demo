@@ -5,29 +5,29 @@
 # Learn more about k3d: https://k3d.io/v5.6.0/
 
 # Check if Docker is installed
-docker --version
-if [ $? -ne 0 ]; then
-    echo "Docker not found. Installing Docker..."
-    # Update the apt package index and install packages to allow apt to use a repository over HTTPS
-    sudo apt-get update
-    sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+# docker --version
+# if [ $? -ne 0 ]; then
+#     echo "Docker not found. Installing Docker..."
+#     # Update the apt package index and install packages to allow apt to use a repository over HTTPS
+#     sudo apt-get update
+#     sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 
-    # Add Docker’s official GPG key
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#     # Add Docker’s official GPG key
+#     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-    # Set up the stable repository
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+#     # Set up the stable repository
+#     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
-    # Update the apt package index again
-    sudo apt-get update
+#     # Update the apt package index again
+#     sudo apt-get update
 
-    # Install the latest version of Docker CE
-    sudo apt-get install -y docker-ce
+#     # Install the latest version of Docker CE
+#     sudo apt-get install -y docker-ce
 
-    echo "Docker has been installed."
-else
-    echo "Docker is already installed."
-fi
+#     echo "Docker has been installed."
+# else
+#     echo "Docker is already installed."
+# fi
 
 # Install kubectl
 kubectl --version
