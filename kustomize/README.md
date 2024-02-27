@@ -45,13 +45,13 @@ To install the OpenTelemetry demo using Helm charts, follow these steps:
 ## Verify all resources are running
  
 ```shell
-kubectl get pods,svc,deployments,ingress
+kubectl get pods,svc,deployments,ingress -n otel-demo
 ```
 
 ## Preview Apps 
 
 ```shell
-kubectl port-forward svc/otel-demo-frontendproxy 30080:8080
+kubectl port-forward -n otel-demo svc/otel-demo-frontendproxy 30080:8080
 ```
 
 Once the installation is complete, you can access and interact with the OpenTelemetry demo resources at the following url on your browser
