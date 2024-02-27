@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# This script is used to install kustomize, helm and k3d on a local machine
+# It also creates a k3d cluster and exposes port 30080 on your local machine.
+# Learn more about k3d: https://k3d.io/v5.6.0/
 
 # Install kustomize
 curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash

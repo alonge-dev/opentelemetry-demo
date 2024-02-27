@@ -49,12 +49,24 @@ kubectl get pods,svc,deployments,ingress
 ```
 
 ## Preview Apps 
+
+```shell
+kubectl port-forward svc/otel-demo-frontendproxy 30080:8080
+```
+
 Once the installation is complete, you can access and interact with the OpenTelemetry demo resources at the following url on your browser
 
-The following components are installed
-- Jaeger
-
+The following components are installed:
+- [Web Store](http://localhost:30080/)
+- [Jaeger](http://localhost:30080/jaeger/ui)
+- [Grafana](http://localhost:30080/grafana)
+- [Feature Flag UI](http://localhost:30080/feature)
+- [Load Generator](http://localhost:30080/loadgen)
+- [OTLP Collector](http://localhost:30080/otlp-http/v1/traces)
 
 ## Cleanup
 
 To uninstall the OpenTelemetry demo, run the following command:
+```shell
+kubectl delete ns otel-demo
+```
