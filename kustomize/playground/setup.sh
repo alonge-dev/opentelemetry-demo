@@ -23,5 +23,8 @@ chmod 700 get_helm.sh
 # Verify helm installation
 helm version
 
+# set helm in path 
+export PATH=$PATH:/usr/local/bin
+
 # Verify k3d cluster
 kubectl cluster-info
